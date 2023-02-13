@@ -21,7 +21,7 @@ const validator = {
                                 // posiciones de la variable
          //console.log("entro al for del validator.js ")
 
-          if (i % 2 === 1) {
+          if (i % 2 === 1) { 
               n = (convert[i] * 2); //
 
               //8*2
@@ -37,14 +37,12 @@ const validator = {
 
           sum = sum + n  //sum = 9
 
-          let sump = sum;
-          console.log("VALOR DE LA N = " + n)
-          console.log("VALOR DE LA TARJETA EN NUMEROS = " + sump)
-
-          //i++
+      
+    
        }
        console.log("aqui abajo resultado vector suma**************")
     console.log(sum)
+
      return sum % 10 === 0 ? true :false
          
   },
@@ -58,10 +56,10 @@ const validator = {
 
       for (let i = 0; i < arr.length; i++) { //i=6
           if (i < arr.length - 4) {  //6-4 = 2
-              string = string + '#';   // string=[#,#,  ]
+              string = string + '#';   // string=[#,#  ]
               
           } else {
-              string = string + arr[i];  //string=[#,#,5,2,6,2]
+              string = string + arr[i];  //string=[#,#,5,8,6,8]
           }
       }
       console.log("el string es=== " + string)
@@ -71,4 +69,7 @@ const validator = {
 }
 
 export default validator;
+
 //5352621771856289   
+
+

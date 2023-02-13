@@ -1,48 +1,53 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Tarjeta de crédito válida</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
 
-  <body>
-    <div class="container">                          <!--creamos un contenedor--->
+<head>
+  <meta charset="utf-8">
+  <title>Tarjeta de crédito válida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
 
-          <section id="validador">                        <!--caja para validar--->
-           <h1>Validador de Tarjeta de Credito</h1>
-            <p>Jamás entregues los datos de tu tarjeta a terceros.  Aplicacion para validar numeros de Tarjetas de Credito</p>
-               
-            
-                 <h4>Número de tarjeta</h4>
-                 <p>Solo se aceptan tarjetas de credito de 13 a 16 digitos</p>
-                 <input type="number" id="cardNumber" placeholder="0000 0000 0000 0000" >
-                 
-                  <br> 
+<body>
+
+  <div class="container"> <!--creamos un contenedor--->
+
+    <section id="validador"> <!--caja para validar--->
+      <h1>Validador de Tarjeta de Credito</h1>
+      <p>Jamás entregues los datos de tu tarjeta a terceros. Aplicacion para validar numeros de Tarjetas de Credito</p>
 
 
-                      <button class="buttons" id="btnValidar">Validar</button></a> <!--creamos un boton--->
-        
-            </section>
-  
+      <h4>Número de tarjeta</h4>
+      <p>Solo se aceptan tarjetas de credito de 13 a 16 digitos</p>
+      <input type="number" id="cardNumber" placeholder="0000 0000 0000 0000">
 
-            <!-- ************esto se muestra cuando la tarjeta es valida ************ -->
-          
-          <section id="resultado">    <!--caja resultado--->  
-              <h1>¡Tarjeta Verificada!</h1>
-              <h3>Su tarjeta de credito es valida! usela bajo su propia responsabilidad</h3>
-              <br>
-              <button class="buttons" id="btnInicio">Inicio</button></a>
-          </section>
+      <br>
 
-          <!-- ************esto se muestra cuando la tarjeta es valida ************ -->
 
-      
-    </div>
-              <script src="index.js" type="module"></script>
-  </body>
+      <button class="buttons" id="btnValidar">Validar</button></a> <!--creamos un boton--->
 
-  <!-- 5352621771856289 -->
+    </section>
+
+
+    <!-- ************esto se muestra cuando la tarjeta es valida ************ -->
+
+    <section id="resultado"> <!--caja resultado--->
+      <h1>¡Tarjeta Verificada!</h1>
+      <h3>Su tarjeta de credito es valida! usela bajo su propia responsabilidad</h3>
+      <br>
+
+
+
+      <button class="buttons" id="btnInicio">Inicio</button></a>
+    </section>
+
+    <!-- ************esto se muestra cuando la tarjeta es valida ************ -->
+
+
+  </div>
+  <script src="index.js" type="module"></script>
+</body>
+
+<!-- 5352621771856289 -->
 
 
 </html>

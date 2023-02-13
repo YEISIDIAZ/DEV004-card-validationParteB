@@ -13,10 +13,10 @@ import validator from './validator.js';
     console.log("var cardNumber del index.js es = " + cardNumber); // concatenacion
     //console.log("variable cardNUmber del index.js: " + cardNumber)
     
-    let validation = validator.isValid(cardNumber);
+    let validation = validator.isValid(cardNumber);   //true
     console.log("variable validation del index.js: " + validation)
 
-    let maskify = validator.maskify(cardNumber);
+    let maskify = validator.maskify(cardNumber);   //string=[#,#,5,8,6,8]
     console.log("variable MASKIFY del index.js: " + maskify)
 
 
@@ -30,7 +30,7 @@ import validator from './validator.js';
 
    
         if(cardNumber.length < 13 || cardNumber.length > 16){
-            alert("Ingresa un número de tarjeta válido.");
+            alert("Ingresa un número de tarjeta válido.");   
             }else if(cardNumber === 0){
                 alert("Ingresa un número de tarjeta válido.");
 
@@ -41,7 +41,7 @@ import validator from './validator.js';
                             alert("Tarjeta " + maskify + " válida.");
                            
                               document.getElementById("resultado").style.display = "block";
-                            
+                              
                           
                           
                     }else {
@@ -51,8 +51,8 @@ import validator from './validator.js';
 
  });
 
-btnInicio.addEventListener("click", ()=>{ // si hago clic en el boton voy a inicio.
-     document.getElementById("resultado").style.display = "none";
-     document.getElementById("validador").style.display = "block";
+     btnInicio.addEventListener("click", ()=>{ // si hago clic en el boton voy a inicio.
+     document.getElementById("resultado").style.display = "none"; //ocultar
+     document.getElementById("validador").style.display = "block";   //mostrar
 });
 //5352621771856289                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
