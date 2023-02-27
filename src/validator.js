@@ -1,70 +1,46 @@
 const validator = {
-       
-  isValid : (cardNumber) => { //objeto, recibe parametro con cardNumber//
-    //4083952015263
-    //2538
-    //[2,5,3,8]
-    //[8,3,5,2]
-    const convert = cardNumber.split('').reverse(); //3625102593804
-    //El método split() divide un objeto de tipo String en un array (vector) de cadenas
-    //El método reverse() invierte el orden de los elementos de un array
-    // El primer elemento pasa a ser el último y el último pasa a ser el primero.
 
-     
-      
+  isValid: (cardNumber) => { //objeto, recibe parametro con cardNumber//
 
-    let sum     = 0; //0, 6
-    let n       = 0; //0, 6
 
-    for (let i = 0; i < convert.length; i++) {  //i=1
-      
-      
-      if (i % 2 === 1) { 
-        n = (convert[i] * 2); // 12
+    let sum = 0;
+    const nDigitos = cardNumber.length; //16       
+    const nValidados = nDigitos % 2; //16%2 = 0  5352621771856289
 
-        if (n >= 10) {
-
-         
-          
-         n = (n + 10) + 1  // 
-        
-
-         
-                 
-        }
-
-      } else {
-        n = (convert[i])   // n= 9
-      }
-
-      sum = sum + n  //sum = 9
-
-      
-    
+    for (let i = 0; i < nDigitos; i++) {   //i=2
+      let digitos = +cardNumber[i];    //digitos = 8
+           console.log('el numero en la posicion : ' + i + " es : " + cardNumber[i])
+      if (i % 2 === nValidados)  // (1   ====     0)     
+          digitos *= 2;     //  digitos *= 2----    digitos=  10                                ///  10 3 10
+          console.log('la multiplicacion x 2 en la iteraccion: ' + i + " : " + digitos)
+      if (digitos > 9)  
+        digitos -= 9;    ///  digitos = 1                                                   ///  1   3   1 
+       console.log('la resta con el 9 en la iteraccion: ' + i + " : " + digitos)
+       //console.log('digitos mayores de 9 ' + digitos)
+      sum += digitos;  // 4                                   /// 1 4 5 
+      console.log('la suma en la iteraccion: ' + i + " : " + sum)
     }
-      
-
-
-    return sum % 10 === 0 ? true :false
-         
+    console.log('la suma total ' + sum)
+    return (sum % 10 === 0);  
+    
+    
   },
 
 
+  maskify: (cardNumber) => {
+    const arr = cardNumber.split('');   //arr=[5,3,5,2,6,2]
 
-  maskify : (cardNumber) => {
-    const arr    = cardNumber.split('');   //arr=[5,3,5,2,6,2]
-     
     let string = '';
 
     for (let i = 0; i < arr.length; i++) { //i=6
       if (i < arr.length - 4) {  //6-4 = 2
         string = string + '#';   // string=[#,#  ]
-              
+
       } else {
         string = string + arr[i];  //string=[#,#,5,8,6,8]
       }
     }
-     
+
 
     return string;
   }
@@ -72,7 +48,7 @@ const validator = {
 
 export default validator;
 
-//5352621771856289   
+//5352621771856289
 
 
 // 5352621771856289 -->
